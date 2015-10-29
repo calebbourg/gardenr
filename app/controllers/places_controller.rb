@@ -8,7 +8,7 @@ def new
 	@place = Place.new
 end
 def create
-	current_user.places.create(place_params)
+	@place = current_user.places.create(place_params)
 	redirect_to root_path
 end	
 
@@ -17,13 +17,19 @@ def show
 end
 def edit
 	@place = Place.find(params[:id])
-	@place.update_attributes(place_params)
-	redirect_to root_path
 end
 
 def update
+	@place = Place.find(params[:id])
+	@place.update_attributes(place_params)
+	redirect_to root_path
 end
-@place = Plcae.find(params[:id])
+def destroy
+	@place = Place.find(params[:id])
+	@place.destroy
+	redirect_to root_path
+end
+
 private
 
 def place_params
