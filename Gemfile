@@ -14,7 +14,7 @@ gem 'devise', '>= 3.2.4'
 gem 'pg'
 
 # Use SCSS for stylesheets
-gem 'sass-rails' '~> 4.0.0'
+gem 'sass-rails'
 
 gem 'uglifier', '>= 1.3.0'
 

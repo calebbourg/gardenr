@@ -17,7 +17,13 @@ def show
 end
 def edit
 	@place = Place.find(params[:id])
+	@place.update_attributes(place_params)
+	redirect_to root_path
 end
+
+def update
+end
+@place = Plcae.find(params[:id])
 private
 
 def place_params
