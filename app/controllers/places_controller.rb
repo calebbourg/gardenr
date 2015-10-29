@@ -9,7 +9,11 @@ def new
 end
 def create
 	@place = current_user.places.create(place_params)
-	redirect_to root_path
+	if @place.valid?
+		redirect_to root_path
+	else
+		render :new, :status => :unprocessable_entity
+	end	
 end	
 
 def show
@@ -28,7 +32,11 @@ def update
 		return render :text => 'Not Allowed', :status => :forbidden
 	end	
 	@place.update_attributes(place_params)
-	redirect_to root_path
+	if @place.valid?
+		redirect_to root_path
+	else
+		render :edit, :status => :unprocessable_entity
+	end	
 end
 def destroy
 	@place = Place.find(params[:id])
