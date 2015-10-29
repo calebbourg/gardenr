@@ -8,6 +8,7 @@ gem 'rails', '4.0.1'
 gem 'kaminari'
 gem 'simple_form'
 gem 'sprockets', '2.11.0'
+gem 'devise', '>= 3.2.4'
 
 # Use postgresql as the database for Active Record
 gem 'pg'
