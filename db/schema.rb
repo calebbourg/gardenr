@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20151104165426) do
   enable_extension "plpgsql"
 
   create_table "comments", force: true do |t|
-    t.text     "messsage"
+    t.text     "message"
     t.string   "rating"
     t.integer  "user_id"
     t.integer  "place_id"
