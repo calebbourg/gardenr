@@ -17,8 +17,9 @@ def create
 end	
 
 def show
-	@place = Place.find(params[:id])
-	@comment = Comment.new
+  @place = Place.find(params[:id])
+  @comment = Comment.new
+  puts "#{@comment.inspect}"
 end
 def edit
 	@place = Place.find(params[:id])
