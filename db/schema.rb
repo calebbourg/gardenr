@@ -29,6 +29,9 @@ ActiveRecord::Schema.define(version: 20151104192029) do
   add_index "comments", ["user_id", "place_id"], name: "index_comments_on_user_id_and_place_id", using: :btree
 
   create_table "photos", force: true do |t|
+    t.text     "caption"
+    t.integer  "place_id"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
