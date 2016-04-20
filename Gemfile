@@ -5,13 +5,13 @@ gem 'bootstrap-sass', '~>3.3.5.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1'
 
-gem 'kaminari'
+gem 'kaminari' # pagination
 gem 'simple_form'
 gem 'sprockets', '2.11.0'
 gem 'devise', '>= 3.2.4'
-gem 'geocoder'
+gem 'geocoder' #for use with google API
 gem 'figaro', ">= 1.0.0"
-gem 'carrierwave'
+gem 'carrierwave' #uploading
 gem 'fog', "~> 1.3.1"
 gem "factory_girl_rails", "~> 4.0"
 
